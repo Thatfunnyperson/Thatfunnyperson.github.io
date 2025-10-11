@@ -1,8 +1,77 @@
 <!DOCTYPE html>
-<html>
-<body?>
-<h1>Coco Rufiange</h1>
-<br>
-<p>Mon premier site</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coco's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="hero">
+    <h1>Coco Rufiange</h1>
+    <h2>Game & Level Designer</h2>
+    <nav>
+      <a href="#about">About Me</a> |
+      <a href="https://your-itch-link.com" target="_blank">Itch.io</a> |
+      <a href="#projects">Projects</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </section>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <br><br>
+
+      <div class="sparkle-frame">
+      <img src="CocoPortrait.jpg" class="parallax" data-speed="2" />
+      <div class="sparkle-layer"></div>
+
+      <p>Hi! I'm Coco—a designer and dev who blends retro charm with modern mechanics. I specialize in expressive gameplay, surreal FX, and juicy interactions.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Fan FX Mechanic – Dynamic impulse system with sparkle trails</li>
+        <li>Portfolio Site – Retro-inspired layout with turquoise accents</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:cocorufiange@gmail.com">cocorufiange@gmail.com</a></p>
+    </section>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+<!-- Your parallax script -->
+<script>
+  document.addEventListener("mousemove", function(e) {
+    document.querySelectorAll(".parallax").forEach(function(el) {
+      const speed = el.getAttribute("data-speed");
+      const x = (window.innerWidth - e.pageX * speed) / 100;
+      const y = (window.innerHeight - e.pageY * speed) / 100;
+      el.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    });
+  });
+</script>
+<!-- Your sparkle script -->
+<script>
+  const sparkleLayer = document.querySelector('.sparkle-layer');
+
+  for (let i = 0; i < 15; i++) {
+    const sparkle = document.createElement('div');
+    sparkle.style.position = 'absolute';
+    sparkle.style.width = '6px';
+    sparkle.style.height = '6px';
+    sparkle.style.borderRadius = '50%';
+    sparkle.style.background = 'radial-gradient(circle, #FF2DAF 0%, transparent 70%)';
+    sparkle.style.top = `${40 + Math.random() * 20}%`;  // between 40% and 60%
+    sparkle.style.left = `${40 + Math.random() * 20}%`; // between 40% and 60%
+    sparkle.style.animation = `sparkleMove ${4 + Math.random() * 4}s linear infinite`;
+    sparkleLayer.appendChild(sparkle);
+  }
+</script>
+
 </body>
 </html>
