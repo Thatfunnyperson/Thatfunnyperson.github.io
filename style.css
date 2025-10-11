@@ -160,6 +160,11 @@ footer {
   z-index: 2;
   overflow: hidden;
 }
+/* Sparkle FX Glow */
+.sparkle-layer div {
+  filter: drop-shadow(0 0 4px #FF2DAF);
+}
+
 
 /* Sparkle FX */
 .sparkle-layer::before {

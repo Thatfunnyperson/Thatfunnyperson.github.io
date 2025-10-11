@@ -10,40 +10,45 @@
   <section id="hero">
     <h1>Coco Rufiange</h1>
     <h2>Game & Level Designer</h2>
-    <nav>
-      <a href="#about">About Me</a> |
-      <a href="https://your-itch-link.com" target="_blank">Itch.io</a> |
-      <a href="#projects">Projects</a> |
-      <a href="#contact">Contact</a>
-    </nav>
+   <nav>
+  <a href="#projects">Projects</a> |
+  <a href="#about">About Me</a> |
+  <a href="#contact">Contact</a>
+</nav>
   </section>
 
-  <div class="container">
-    <section id="about">
-      <h2>About Me</h2>
-      <br><br>
+<div class="container">
 
-      <div class="sparkle-frame">
-      <img src="CocoPortrait.jpg" class="parallax" data-speed="2" />
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Corporate Ladder</li>
+      <li>Uchronie</li>
+      <li>Blade Rush</li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <br><br>
+
+    <div class="sparkle-frame">
+      <img src="CocoPortrait.jpg" class="parallax about-img" data-speed="2" />
       <div class="sparkle-layer"></div>
+    </div>
 
-      <p>Hi! I'm Coco—a designer and dev who blends retro charm with modern mechanics. I specialize in expressive gameplay, surreal FX, and juicy interactions.</p>
-    </section>
+    <p>
+Hello! My name is Coco Rufiange, and I'm passionate about every aspect of game development—from expressive mechanics to immersive level design. I specialize in crafting playful, responsive experiences that blend retro aesthetics with modern technical polish. Whether I'm prototyping levels, designing game mechanics, or bringing environments to life with set dressing, I approach every project with curiosity, creativity, and a focus on engaging, intuitive player experiences.
+</p>
+  </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>Fan FX Mechanic – Dynamic impulse system with sparkle trails</li>
-        <li>Portfolio Site – Retro-inspired layout with turquoise accents</li>
-      </ul>
-    </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:cocorufiange@gmail.com">cocorufiange@gmail.com</a></p>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:cocorufiange@gmail.com">cocorufiange@gmail.com</a></p>
-    </section>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  </div>
+</div>
+
 <!-- Your parallax script -->
 <script>
   document.addEventListener("mousemove", function(e) {
@@ -62,12 +67,13 @@
   for (let i = 0; i < 15; i++) {
     const sparkle = document.createElement('div');
     sparkle.style.position = 'absolute';
-    sparkle.style.width = '6px';
-    sparkle.style.height = '6px';
+    const size = 4 + Math.random() * 4; // between 4px and 8px
+    sparkle.style.width = `${size}px`;
+    sparkle.style.height = `${size}px`;
     sparkle.style.borderRadius = '50%';
     sparkle.style.background = 'radial-gradient(circle, #FF2DAF 0%, transparent 70%)';
-    sparkle.style.top = `${40 + Math.random() * 20}%`;  // between 40% and 60%
-    sparkle.style.left = `${40 + Math.random() * 20}%`; // between 40% and 60%
+    sparkle.style.top = `${Math.random() * 100}%`;
+    sparkle.style.left = `${Math.random() * 100}%`;
     sparkle.style.animation = `sparkleMove ${4 + Math.random() * 4}s linear infinite`;
     sparkleLayer.appendChild(sparkle);
   }
