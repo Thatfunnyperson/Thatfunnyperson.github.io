@@ -99,6 +99,12 @@ section p, section ul {
   line-height: 1.6;
   color: #CFFFE5; /* Soft Mint for readability */
 }
+* Justify About paragraph */
+.about-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 /* Section Divider for About */
 #about::before {
   content: "";
@@ -164,7 +170,6 @@ footer {
 .sparkle-layer div {
   filter: drop-shadow(0 0 4px #FF2DAF);
 }
-
 
 /* Sparkle FX */
 .sparkle-layer::before {
