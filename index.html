@@ -19,14 +19,23 @@
 
 <div class="container">
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Corporate Ladder</li>
-      <li>Uchronie</li>
-      <li>Blade Rush</li>
-    </ul>
-  </section>
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-gallery">
+    <div class="project-item">
+      <img src="CorporateLadder.jpg" alt="Corporate Ladder" />
+      <p>Corporate Ladder</p>
+    </div>
+    <div class="project-item">
+      <img src="Uchronia.jpg" alt="Uchronie" />
+      <p>Uchronie</p>
+    </div>
+    <div class="project-item">
+      <img src="BladeRush.jpg" alt="Blade Rush" />
+      <p>Blade Rush</p>
+    </div>
+  </div>
+</section>
 
   <section id="about">
     <h2>About Me</h2>
@@ -48,8 +57,13 @@ Hello! My name is Coco Rufiange, and I'm passionate about every aspect of game d
   </section>
 
 </div>
+</section> <!-- Contact -->
 
-<!-- Your parallax script -->
+<footer>
+  <p>© 2025 Coco Rufiange. All rights reserved.</p>
+</footer>
+
+<!-- Parallax script -->
 <script>
   document.addEventListener("mousemove", function(e) {
     document.querySelectorAll(".parallax").forEach(function(el) {
@@ -60,7 +74,7 @@ Hello! My name is Coco Rufiange, and I'm passionate about every aspect of game d
     });
   });
 </script>
-<!-- Your sparkle script -->
+<!--Sparkle script -->
 <script>
   const sparkleLayer = document.querySelector('.sparkle-layer');
 

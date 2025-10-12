@@ -88,10 +88,14 @@ section {
 }
 
 section h2 {
-  font-size: 1.5em;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
   color: #00CFFF; /* Electric Blue */
   border-bottom: 1px solid #00FFD0;
   padding-bottom: 5px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 6px #00FFD0;
 }
 
 section p, section ul {
@@ -101,8 +105,33 @@ section p, section ul {
 }
 * Justify About paragraph */
 .about-text {
+  clear: both;
   text-align: justify;
   text-justify: inter-word;
+  hyphens: auto;
+}
+/* Project Gallery Layout */
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-item {
+  text-align: center;
+  max-width: 300px;
+}
+
+.project-item img {
+  width: 100%;
+  border: 2px solid #FF2DAF;
+  box-shadow: 0 0 10px #FF2DAF;
+  transition: transform 0.3s ease;
+}
+
+.project-item img:hover {
+  transform: scale(1.05);
 }
 
 /* Section Divider for About */
@@ -137,6 +166,16 @@ footer {
   border-top: 2px dashed #00FFD0;
   padding-top: 10px;
 }
+footer p {
+  animation: pulseGlow 3s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { text-shadow: 0 0 5px #FF2DAF; }
+  50% { text-shadow: 0 0 15px #FF2DAF; }
+  100% { text-shadow: 0 0 5px #FF2DAF; }
+}
+
 /* Parallax FX */
 .parallax {
   position: relative; /* or absolute if you want it to float */
@@ -146,13 +185,18 @@ footer {
   height: auto;
 }
 
-.parallax:hover {
-  transform: scale(1.05); /* subtle zoom on hover */
-}
 /* Sparkle Frame Container */
 .sparkle-frame {
   position: relative;
   display: inline-block;
+}
+.about-img {
+  float: right;
+  margin-left: 20px;
+  transition: transform 0.3s ease;
+}
+.about-img:hover {
+  transform: rotate(5deg) scale(1.05);
 }
 
 /* Sparkle Layer Positioned Around Image */
@@ -197,5 +241,24 @@ footer {
   100% {
     transform: translate(-80%, -20%) scale(1);
     opacity: 0;
+  }
+}
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.5em;
+  }
+
+  #hero h2 {
+    font-size: 1.2em;
+  }
+
+  .about-img {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .container {
+    padding: 10px;
   }
 }
