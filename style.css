@@ -103,6 +103,12 @@ section p, section ul {
   line-height: 1.6;
   color: #CFFFE5; /* Soft Mint for readability */
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 * Justify About paragraph */
 .about-text {
   clear: both;
