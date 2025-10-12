@@ -109,6 +109,11 @@ img {
   display: block;
   margin: 0 auto;
 }
+.project-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
 * Justify About paragraph */
 .about-text {
   clear: both;
@@ -266,5 +271,8 @@ footer p {
 
   .container {
     padding: 10px;
+  }
+ .project-item img {
+    max-width: 100%;
   }
 }
